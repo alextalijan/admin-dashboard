@@ -17,7 +17,48 @@ body {
 
 .sidebar {
     grid-area: 1 / 1 / -1 / 2;
-    background-color: cyan;
+    background-color: #4285F4;
+    color: white;
+    font-weight: 500;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.3rem;
+}
+
+.logo,
+.sidebar li:has(img[alt="communities icon"]) {
+    margin-bottom: 3rem;
+}
+
+.logo > img {
+    width: 2rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul img {
+    width: 1rem;
+}
+
+.sidebar ul {
+    display: grid;
+    row-gap: 1rem;
+}
+
+.logo,
+.sidebar ul li {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    column-gap: 5px;
+    align-items: center;
+}
+
+.sidebar img {
+    justify-self: center;
 }
 
 .header {
