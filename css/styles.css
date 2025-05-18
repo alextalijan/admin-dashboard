@@ -130,5 +130,37 @@ body {
 
 .main {
     grid-area: 2 / 2 / -1 / -1;
-    background-color: lightgray;
+    background-color: #E8F0FE;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.main > .projects-section {
+    grid-area: 1 / 1 / -1 / 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.main > .announcements-section {
+    grid-area: 1 / 2 / 2 / -1;
+}
+
+.announcements {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.main > .trending-section {
+    grid-area: 2 / 2 / -1 / -1;
+}
+
+.trending {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
 }
