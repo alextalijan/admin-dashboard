@@ -30,6 +30,13 @@ body {
 
 .logo {
     font-size: 1.3rem;
+    padding: 0.3rem;
+    text-decoration: none;
+}
+
+.logo:link,
+.logo:visited {
+    color: white;
 }
 
 .logo > img {
