@@ -1,5 +1,6 @@
 :root {
     --website-blue: #4285F4;
+    --website-blue-hover: #3367d6;
 }
 
 * {
@@ -38,7 +39,7 @@ body {
 .sidebar ul {
     list-style: none;
     display: grid;
-    row-gap: 1rem;
+    row-gap: 0.8rem;
 }
 
 .sidebar ul img {
@@ -46,11 +47,21 @@ body {
 }
 
 .logo,
-.sidebar ul li {
+.sidebar ul a {
     display: grid;
     grid-template-columns: 2rem 1fr;
     column-gap: 5px;
     align-items: center;
+}
+
+.sidebar ul a {
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+}
+
+.sidebar ul a:hover {
+    background-color: var(--website-blue-hover);
+    cursor: pointer;
 }
 
 .logo,
@@ -128,6 +139,11 @@ body {
     font-weight: 600;
 }
 
+.buttons > button:hover {
+    background-color: var(--website-blue-hover);
+    cursor: pointer;
+}
+
 .main {
     padding: 1.5rem;
     grid-area: 2 / 2 / -1 / -1;
@@ -198,6 +214,7 @@ body {
 .right-pagepart {
     display: flex;
     flex-direction: column;
+    gap: 2.5rem;
 }
 
 .right-pagepart > * {
