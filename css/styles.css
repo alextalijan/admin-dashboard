@@ -1,6 +1,7 @@
 :root {
     --website-blue: #4285F4;
     --website-blue-hover: #3367d6;
+    --website-button-hover: rgba(0, 0, 0, 0.03);
 }
 
 * {
@@ -89,12 +90,12 @@ body {
     font-weight: 600;
 }
 
-.header > .notification-bar,
+.notification-bar,
 .header > .buttons {
     margin-right: 2rem;
 }
 
-.header > .search-bar {
+.search-bar {
     display: grid;
     grid-template-columns: 2rem 1fr;
     align-items: center;
@@ -109,7 +110,7 @@ body {
     border-radius: 1rem;
 }
 
-.header > .notification-bar {
+.notification-bar {
     display: grid;
     grid-template-columns: repeat(2, min-content) max-content;
     justify-content: end;
@@ -118,7 +119,25 @@ body {
     align-items: center;
 }
 
-.header > .welcome-message {
+.notification-bar > button {
+    border: none;
+    background-color: transparent;
+    border-radius: 100%;
+    padding: 0.5rem;
+    display: flex;
+}
+
+.notification-button:hover {
+    background-color: var(--website-button-hover);
+    cursor: pointer;
+}
+
+.profile-button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.welcome-message {
     display: grid;
     grid-template-columns: min-content 1fr;
     align-items: center;
@@ -209,13 +228,20 @@ body {
 .card-buttons {
     justify-self: end;
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     margin-top: 1.5rem;
 }
 
 .card-buttons > button {
     border: none;
     background-color: transparent;
+    padding: 0.5rem;
+    border-radius: 100%;
+}
+
+.card-buttons > button:hover {
+    background-color: var(--website-button-hover);
+    cursor: pointer;
 }
 
 .right-pagepart {
@@ -235,12 +261,28 @@ body {
     grid-template-rows: repeat(auto-fit, 1fr);
     background-color: white;
     border-radius: 0.5rem;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 hr {
     border-top: 1px solid #ccc;
     margin: 1rem 0;
+}
+
+.announcements > a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.announcements > a:visited {
+    color: black;
+}
+
+.announcements > a:hover {
+    background-color: var(--website-button-hover);
+    cursor: pointer;
 }
 
 .announcements > :nth-child(odd) > p:first-child {
@@ -258,18 +300,29 @@ hr {
     grid-template-rows: repeat(4, 1fr);
     background-color: white;
     border-radius: 0.5rem;
-    padding: 2rem;
-    row-gap: 2rem;
+    padding: 1rem;
+    row-gap: 0.5rem;
 }
 
-.trending > * {
+.trending > a {
     display: grid;
     grid-template-columns: min-content 1fr;
     column-gap: 1rem;
     align-items: center;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
-.trending > div p:nth-child(2) {
+.trending > a:visited {
+    color: black;
+}
+
+.trending > a:hover {
+    background-color: var(--website-button-hover);
+}
+
+.trending > a p:nth-child(2) {
     font-weight: 200;
     opacity: 0.6;
 }
